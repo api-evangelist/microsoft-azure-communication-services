@@ -1,18 +1,16 @@
 aid: microsoft-azure-communication-services
-url: 
-  https://raw.githubusercontent.com/api-evangelist/microsoft-azure-communication-services/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-communication-services/refs/heads/main/apis.yml
 apis:
   - aid: microsoft-azure-communication-services:rest-api
     name: Azure Communication Services REST API
     tags:
-      - Communication
-      - Voice
-      - Video
       - Chat
-      - SMS
+      - Communication
       - Email
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - SMS
+      - Video
+      - Voice
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://{resource}.communication.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/communication/
     properties:

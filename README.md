@@ -5,12 +5,12 @@ Azure Communication Services REST API provides cloud-based communication capabil
 
 ## Tags:
 
- - Communication, Voice, Video, Chat, SMS, Email
+ - Chat, Communication, Email, SMS, Video, Voice
 
 ## Timestamps
 
 - **Created:** 2026-03-13
-- **Modified:** 2026-03-13
+- **Modified:** 2026-04-28
 
 ## APIs
 
@@ -18,6 +18,12 @@ Azure Communication Services REST API provides cloud-based communication capabil
 Azure Communication Services REST API provides cloud-based communication capabilities for voice calling, video calling, SMS messaging, email, and chat. It supports Teams interoperability, phone number management, call recording, and identity management for custom communication applications.
 
 **Human URL:** [https://learn.microsoft.com/en-us/rest/api/communication/](https://learn.microsoft.com/en-us/rest/api/communication/)
+
+**Base URL:** https://{resource}.communication.azure.com/
+
+#### Tags:
+
+ - Chat, Communication, Email, SMS, Video, Voice
 
 #### Properties
 

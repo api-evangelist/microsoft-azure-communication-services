@@ -14,6 +14,8 @@ apis:
     baseURL: https://{resource}.communication.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/communication/
     properties:
+      - url: openapi/microsoft-azure-communication-services-openapi.yml
+        type: OpenAPI
       - url: https://learn.microsoft.com/en-us/rest/api/communication/
         type: Documentation
     description: >-

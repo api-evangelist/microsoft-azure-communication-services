@@ -1,0 +1,155 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Azure Communication Services REST API — Identity
+  description: 'Azure Communication Services REST API — Identity. 3 operations. Lead operation: ACS Create identity. Self-contained
+    Naftiko capability covering one Microsoft Azure Communication Services business surface.'
+  tags:
+  - Microsoft Azure Communication Services
+  - Identity
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MICROSOFT_AZURE_COMMUNICATION_SERVICES_API_KEY: MICROSOFT_AZURE_COMMUNICATION_SERVICES_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: microsoft-azure-communication-services-identity
+    baseUri: https://{resource}.communication.azure.com
+    description: Azure Communication Services REST API — Identity business capability. Self-contained, no shared references.
+    resources:
+    - name: identities
+      path: /identities
+      operations:
+      - name: createidentity
+        method: POST
+        description: ACS Create identity
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: api-version
+          in: query
+          type: string
+          required: true
+    - name: identities-id
+      path: /identities/{id}
+      operations:
+      - name: deleteidentity
+        method: DELETE
+        description: ACS Delete identity
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: identities-id-:issueAccessToken
+      path: /identities/{id}/:issueAccessToken
+      operations:
+      - name: issueaccesstoken
+        method: POST
+        description: ACS Issue access token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.MICROSOFT_AZURE_COMMUNICATION_SERVICES_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: microsoft-azure-communication-services-identity-rest
+    port: 8080
+    description: REST adapter for Azure Communication Services REST API — Identity. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/identities
+      name: identities
+      description: REST surface for identities.
+      operations:
+      - method: POST
+        name: createidentity
+        description: ACS Create identity
+        call: microsoft-azure-communication-services-identity.createidentity
+        with:
+          api-version: rest.api-version
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/identities/{id}
+      name: identities-id
+      description: REST surface for identities-id.
+      operations:
+      - method: DELETE
+        name: deleteidentity
+        description: ACS Delete identity
+        call: microsoft-azure-communication-services-identity.deleteidentity
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/identities/{id}/issueaccesstoken
+      name: identities-id-issueaccesstoken
+      description: REST surface for identities-id-:issueAccessToken.
+      operations:
+      - method: POST
+        name: issueaccesstoken
+        description: ACS Issue access token
+        call: microsoft-azure-communication-services-identity.issueaccesstoken
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: microsoft-azure-communication-services-identity-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Azure Communication Services REST API — Identity. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: acs-create-identity
+      description: ACS Create identity
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: microsoft-azure-communication-services-identity.createidentity
+      with:
+        api-version: tools.api-version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: acs-delete-identity
+      description: ACS Delete identity
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: microsoft-azure-communication-services-identity.deleteidentity
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: acs-issue-access-token
+      description: ACS Issue access token
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: microsoft-azure-communication-services-identity.issueaccesstoken
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

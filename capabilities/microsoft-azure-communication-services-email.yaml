@@ -1,0 +1,88 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Azure Communication Services REST API — Email
+  description: 'Azure Communication Services REST API — Email. 1 operations. Lead operation: ACS Send email. Self-contained
+    Naftiko capability covering one Microsoft Azure Communication Services business surface.'
+  tags:
+  - Microsoft Azure Communication Services
+  - Email
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MICROSOFT_AZURE_COMMUNICATION_SERVICES_API_KEY: MICROSOFT_AZURE_COMMUNICATION_SERVICES_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: microsoft-azure-communication-services-email
+    baseUri: https://{resource}.communication.azure.com
+    description: Azure Communication Services REST API — Email business capability. Self-contained, no shared references.
+    resources:
+    - name: emails:send
+      path: /emails:send
+      operations:
+      - name: sendemail
+        method: POST
+        description: ACS Send email
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: api-version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.MICROSOFT_AZURE_COMMUNICATION_SERVICES_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: microsoft-azure-communication-services-email-rest
+    port: 8080
+    description: REST adapter for Azure Communication Services REST API — Email. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/emails-send
+      name: emails-send
+      description: REST surface for emails:send.
+      operations:
+      - method: POST
+        name: sendemail
+        description: ACS Send email
+        call: microsoft-azure-communication-services-email.sendemail
+        with:
+          api-version: rest.api-version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: microsoft-azure-communication-services-email-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Azure Communication Services REST API — Email. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: acs-send-email
+      description: ACS Send email
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: microsoft-azure-communication-services-email.sendemail
+      with:
+        api-version: tools.api-version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

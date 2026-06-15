@@ -4,29 +4,24 @@ apis:
   - aid: microsoft-azure-communication-services:rest-api
     name: Azure Communication Services REST API
     tags:
-    - Chat
-    - Communication
-    - Email
-    - SMS
-    - Video
-    - Voice
+      - Chat
+      - Communication
+      - Email
+      - SMS
+      - Video
+      - Voice
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://{resource}.communication.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/communication/
     properties:
-    - url: openapi/microsoft-azure-communication-services-openapi.yml
-      type: OpenAPI
-    - url: https://learn.microsoft.com/en-us/rest/api/communication/
-      type: Documentation
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-communication-services-email.yaml
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-communication-services-identity.yaml
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-communication-services-sms.yaml
-    description: Azure Communication Services REST API provides cloud-based communication capabilities for voice calling, video
-      calling, SMS messaging, email, and chat. It supports Teams interoperability, phone number management, call recording,
-      and identity management for custom communication applications.
+      - url: openapi/microsoft-azure-communication-services-openapi.yml
+        type: OpenAPI
+      - url: https://learn.microsoft.com/en-us/rest/api/communication/
+        type: Documentation
+    description: >-
+      Azure Communication Services REST API provides cloud-based communication capabilities for voice calling, video
+      calling, SMS messaging, email, and chat. It supports Teams interoperability, phone number management, call
+      recording, and identity management for custom communication applications.
 common:
   - type: GitHubOrganization
     url: https://github.com/Azure

@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/microsoft-azure-communication-services-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: hmac
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: HMAC-SHA256 signed Authorization header
+  sources:
+  - openapi/microsoft-azure-communication-services-openapi.yml

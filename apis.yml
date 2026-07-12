@@ -23,6 +23,10 @@ apis:
       calling, SMS messaging, email, and chat. It supports Teams interoperability, phone number management, call
       recording, and identity management for custom communication applications.
 common:
+  - type: DomainSecurity
+    url: security/microsoft-azure-communication-services-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-azure-communication-services-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/Azure
   - type: Portal
@@ -37,6 +41,8 @@ common:
     url: https://support.microsoft.com/
   - type: LlmsText
     url: https://portal.azure.com/llms.txt
+  - url: https://azure.microsoft.com/en-us/blog/feed/
+    type: Blog
 created: '2026-03-13'
 modified: '2026-05-19'
 maintainers:

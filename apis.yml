@@ -23,6 +23,8 @@ apis:
       calling, SMS messaging, email, and chat. It supports Teams interoperability, phone number management, call
       recording, and identity management for custom communication applications.
 common:
+  - type: AgenticAccess
+    url: agentic-access/microsoft-azure-communication-services-agentic-access.yml
   - type: DomainSecurity
     url: security/microsoft-azure-communication-services-domain-security.yml
   - type: Authentication

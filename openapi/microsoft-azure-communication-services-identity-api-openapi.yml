@@ -1,24 +1,17 @@
 openapi: 3.1.0
 info:
-  title: Azure Communication Services REST API
-  description: Azure Communication Services REST APIs provide messaging, telephony, identity, chat, and
-    email capabilities. Authentication uses HMAC SHA256 or Azure AD tokens.
+  title: Azure Communication Services REST Email Identity API
+  description: Azure Communication Services REST APIs provide messaging, telephony, identity, chat, and email capabilities. Authentication uses HMAC SHA256 or Azure AD tokens.
   version: '2024-08-01'
-externalDocs:
-  description: Azure Communication Services REST API Documentation
-  url: https://learn.microsoft.com/en-us/rest/api/communication/
 servers:
 - url: https://{resource}.communication.azure.com
   variables:
     resource:
       default: myresource
-tags:
-- name: Identity
-- name: SMS
-- name: Email
-- name: Chat
 security:
 - hmac: []
+tags:
+- name: Identity
 paths:
   /identities:
     post:
@@ -108,67 +101,6 @@ paths:
                     type: string
                   expiresOn:
                     type: string
-  /sms:
-    post:
-      operationId: sendSms
-      summary: ACS Send SMS
-      description: Sends one or more SMS messages.
-      tags:
-      - SMS
-      parameters:
-      - name: api-version
-        in: query
-        required: true
-        schema:
-          type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                from:
-                  type: string
-                smsRecipients:
-                  type: array
-                  items:
-                    type: object
-                message:
-                  type: string
-      responses:
-        '202':
-          description: Send accepted
-          content:
-            application/json:
-              schema:
-                type: object
-  /emails:send:
-    post:
-      operationId: sendEmail
-      summary: ACS Send email
-      description: Queues an email for delivery.
-      tags:
-      - Email
-      parameters:
-      - name: api-version
-        in: query
-        required: true
-        schema:
-          type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        '202':
-          description: Email accepted
-          headers:
-            Operation-Location:
-              schema:
-                type: string
 components:
   securitySchemes:
     hmac:
@@ -176,5 +108,8 @@ components:
       in: header
       name: Authorization
       description: HMAC-SHA256 signed Authorization header
+externalDocs:
+  description: Azure Communication Services REST API Documentation
+  url: https://learn.microsoft.com/en-us/rest/api/communication/
 x-generated-from: https://learn.microsoft.com/en-us/rest/api/communication/
 x-generated-by: claude-crawl-2026-05-08

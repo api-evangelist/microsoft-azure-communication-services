@@ -1,27 +1,58 @@
 aid: microsoft-azure-communication-services
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-azure-communication-services.png
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-communication-services/refs/heads/main/apis.yml
 apis:
-  - aid: microsoft-azure-communication-services:rest-api
-    name: Azure Communication Services REST API
-    tags:
-      - Chat
-      - Communication
-      - Email
-      - SMS
-      - Video
-      - Voice
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://{resource}.communication.azure.com/
-    humanURL: https://learn.microsoft.com/en-us/rest/api/communication/
-    properties:
-      - url: openapi/microsoft-azure-communication-services-openapi.yml
-        type: OpenAPI
-      - url: https://learn.microsoft.com/en-us/rest/api/communication/
-        type: Documentation
-    description: >-
-      Azure Communication Services REST API provides cloud-based communication capabilities for voice calling, video
-      calling, SMS messaging, email, and chat. It supports Teams interoperability, phone number management, call
-      recording, and identity management for custom communication applications.
+- aid: microsoft-azure-communication-services:microsoft-azure-communication-services-email-api
+  name: microsoft-azure-communication-services Email API
+  description: The Email API from microsoft-azure-communication-services — 1 operation(s) for email.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/communication/
+  baseURL: https://{resource}.communication.azure.com/
+  tags:
+  - Email
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-communication-services-email-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/communication/
+- aid: >-
+    microsoft-azure-communication-services:microsoft-azure-communication-services-identity-api
+  name: microsoft-azure-communication-services Identity API
+  description: >-
+    The Identity API from microsoft-azure-communication-services — 3 operation(s) for identity.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/communication/
+  baseURL: https://{resource}.communication.azure.com/
+  tags:
+  - Identity
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-communication-services-identity-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/communication/
+- aid: microsoft-azure-communication-services:microsoft-azure-communication-services-sms-api
+  name: microsoft-azure-communication-services SMS API
+  description: The SMS API from microsoft-azure-communication-services — 1 operation(s) for sms.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/communication/
+  baseURL: https://{resource}.communication.azure.com/
+  tags:
+  - SMS
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-communication-services-sms-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/communication/
 common:
   - type: AgenticAccess
     url: agentic-access/microsoft-azure-communication-services-agentic-access.yml

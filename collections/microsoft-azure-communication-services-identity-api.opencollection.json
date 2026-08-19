@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Communication Services REST Email Identity API",
+    "version": "2024-08-01"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Identity",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ACS Create identity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{resource}.communication.azure.com/identities",
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Creates a new communication user identity."
+        },
+        {
+          "info": {
+            "name": "ACS Delete identity",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{resource}.communication.azure.com/identities/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Deletes a communication user identity."
+        },
+        {
+          "info": {
+            "name": "ACS Issue access token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{resource}.communication.azure.com/identities/:id/:issueAccessToken",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Issues a scoped access token for an identity."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

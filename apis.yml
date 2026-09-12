@@ -69,6 +69,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/communication/
 common:
+  - type: Website
+    url: https://www.microsoft.com/
   - type: AgenticAccess
     url: agentic-access/microsoft-azure-communication-services-agentic-access.yml
   - type: DomainSecurity
@@ -97,3 +99,5 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 description: Azure Communication Services REST API.
+x-parent: microsoft-azure
+x-relationship: product

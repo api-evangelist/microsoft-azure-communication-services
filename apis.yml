@@ -42,11 +42,9 @@ apis:
     url: openapi/microsoft-azure-communication-services-email-api-openapi.yml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/communication/
-- aid: >-
-    microsoft-azure-communication-services:microsoft-azure-communication-services-identity-api
+- aid: microsoft-azure-communication-services:microsoft-azure-communication-services-identity-api
   name: microsoft-azure-communication-services Identity API
-  description: >-
-    The Identity API from microsoft-azure-communication-services — 3 operation(s) for identity.
+  description: The Identity API from microsoft-azure-communication-services — 3 operation(s) for identity.
   humanURL: https://learn.microsoft.com/en-us/rest/api/communication/
   baseURL: https://{resource}.communication.azure.com/
   tags:
@@ -69,35 +67,39 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/communication/
 common:
-  - type: Website
-    url: https://www.microsoft.com/
-  - type: AgenticAccess
-    url: agentic-access/microsoft-azure-communication-services-agentic-access.yml
-  - type: DomainSecurity
-    url: security/microsoft-azure-communication-services-domain-security.yml
-  - type: Authentication
-    url: authentication/microsoft-azure-communication-services-authentication.yml
-  - type: GitHubOrganization
-    url: https://github.com/Azure
-  - type: Portal
-    url: https://portal.azure.com/
-  - type: Pricing
-    url: https://azure.microsoft.com/en-us/pricing/
-  - type: TermsOfService
-    url: https://www.microsoft.com/en-us/legal/terms-of-use
-  - type: PrivacyPolicy
-    url: https://privacy.microsoft.com/en-us/privacystatement
-  - type: Support
-    url: https://support.microsoft.com/
-  - type: LlmsText
-    url: https://portal.azure.com/llms.txt
-  - url: https://azure.microsoft.com/en-us/blog/feed/
-    type: Blog
+- type: Website
+  url: https://www.microsoft.com/
+- type: AgenticAccess
+  url: agentic-access/microsoft-azure-communication-services-agentic-access.yml
+- type: DomainSecurity
+  url: security/microsoft-azure-communication-services-domain-security.yml
+- type: Authentication
+  url: authentication/microsoft-azure-communication-services-authentication.yml
+- type: GitHubOrganization
+  url: https://github.com/Azure
+- type: Portal
+  url: https://portal.azure.com/
+- type: Pricing
+  url: https://azure.microsoft.com/en-us/pricing/
+- type: TermsOfService
+  url: https://www.microsoft.com/en-us/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://privacy.microsoft.com/en-us/privacystatement
+- type: Support
+  url: https://support.microsoft.com/
+- type: LlmsText
+  url: https://portal.azure.com/llms.txt
+- url: https://azure.microsoft.com/en-us/blog/feed/
+  type: Blog
 created: '2026-03-13'
-modified: '2026-05-19'
+modified: '2026-09-16'
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 description: Azure Communication Services REST API.
 x-parent: microsoft-azure
 x-relationship: product
+tags:
+- Email
+- Identity
+- SMS

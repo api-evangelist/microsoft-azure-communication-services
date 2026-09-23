@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Azure Communication Services REST Email Identity API
+  title: Azure Communication Services REST Identity API
   description: Azure Communication Services REST APIs provide messaging, telephony, identity, chat, and email capabilities. Authentication uses HMAC SHA256 or Azure AD tokens.
   version: '2024-08-01'
 servers:

@@ -67,6 +67,12 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/communication/
 common:
+- type: Plans
+  url: plans/microsoft-azure-communication-services-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/microsoft-azure-communication-services-rate-limits.yml
+- type: FinOps
+  url: finops/microsoft-azure-communication-services-finops.yml
 - type: Website
   url: https://www.microsoft.com/
 - type: AgenticAccess

@@ -1,4 +1,4 @@
-# microsoft-azure-communication-services (microsoft-azure-communication-services)
+# Microsoft Azure Communication Services
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,49 +66,123 @@
 
 Azure Communication Services REST API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/microsoft-azure-communication-services/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/microsoft-azure-communication-services/refs/heads/main/apis.yml)
+**Areas:** Email · Identity · SMS
 
-## Timestamps
+## Microsoft Azure Communication Services on APIs.io
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Everything profiled for Microsoft Azure Communication Services is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/microsoft-azure-communication-services/](https://apis.io/providers/microsoft-azure-communication-services/)** — or go straight to one of the APIs or properties below.
 
-## APIs
+### APIs (3)
 
-### Azure Communication Services REST API
+- [microsoft-azure-communication-services Email API](https://apis.io/apis/microsoft-azure-communication-services/microsoft-azure-communication-services-email-api/) — The Email API from microsoft-azure-communication-services — 1 operation(s) for email.
+- [microsoft-azure-communication-services Identity API](https://apis.io/apis/microsoft-azure-communication-services/microsoft-azure-communication-services-identity-api/) — The Identity API from microsoft-azure-communication-services — 3 operation(s) for identity.
+- [microsoft-azure-communication-services SMS API](https://apis.io/apis/microsoft-azure-communication-services/microsoft-azure-communication-services-sms-api/) — The SMS API from microsoft-azure-communication-services — 1 operation(s) for sms.
 
-Azure Communication Services REST API provides cloud-based communication capabilities for voice calling, video calling, SMS messaging, email, and chat. It supports Teams interoperability, phone number management, call recording, and identity management for custom communication applications.
+### Published properties
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/communication/](https://learn.microsoft.com/en-us/rest/api/communication/)
-- **Base URL:** `https://{resource}.communication.azure.com/`
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-#### Tags
+#### Agentic access (1)
 
-- Chat
-- Communication
-- Email
-- SMS
-- Video
-- Voice
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Properties
+- [Microsoft Azure Communication Services Agentic Access](https://apis.io/agentic-access/microsoft-azure-communication-services/microsoft-azure-communication-services-agentic-access/)
 
-- [OpenAPI](openapi/microsoft-azure-communication-services-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/microsoft-azure-communication-services.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-communication-services.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/communication/)
+#### Collections (4)
 
-## Common Properties
+Postman and Open Collection request collections.
 
-- [GitHub Organization](https://github.com/Azure)
-- [Portal](https://portal.azure.com/)
+- [Azure Communication Services REST API](https://apis.io/collections/microsoft-azure-communication-services/open-microsoft-azure-communication-services/)
+- [Azure Communication Services REST Email API](https://apis.io/collections/microsoft-azure-communication-services/open-microsoft-azure-communication-services-email-api/)
+- [Azure Communication Services REST Email Identity API](https://apis.io/collections/microsoft-azure-communication-services/open-microsoft-azure-communication-services-identity-api/)
+- [Azure Communication Services REST Email SMS API](https://apis.io/collections/microsoft-azure-communication-services/open-microsoft-azure-communication-services-sms-api/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Microsoft Azure Communication Services Authentication](https://apis.io/security/microsoft-azure-communication-services/microsoft-azure-communication-services-authentication/)
+- [Microsoft Azure Communication Services Domain Security](https://apis.io/security/microsoft-azure-communication-services/microsoft-azure-communication-services-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Microsoft Azure Communication Services Plans Pricing](https://apis.io/plans/microsoft-azure-communication-services/microsoft-azure-communication-services-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Microsoft Azure Communication Services Rate Limits](https://apis.io/rate-limits/microsoft-azure-communication-services/microsoft-azure-communication-services-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Microsoft Azure Communication Services Finops](https://apis.io/finops/microsoft-azure-communication-services/microsoft-azure-communication-services-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.microsoft.com/)
 - [Pricing](https://azure.microsoft.com/en-us/pricing/)
-- [Terms of Service](https://www.microsoft.com/en-us/legal/terms-of-use)
-- [Privacy Policy](https://privacy.microsoft.com/en-us/privacystatement)
 - [Support](https://support.microsoft.com/)
-- [L L Ms Txt](https://portal.azure.com/llms.txt)
+- [Blog](https://azure.microsoft.com/en-us/blog/feed/)
+- [Terms of service](https://www.microsoft.com/en-us/legal/terms-of-use)
+- [Privacy policy](https://privacy.microsoft.com/en-us/privacystatement)
+- [GitHub](https://github.com/Azure)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 33.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 60.7 |
+| Contract quality | 46.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 39.5 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/microsoft-azure-communication-services/](https://apis.io/providers/microsoft-azure-communication-services/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Microsoft Azure Communication Services: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/microsoft-azure-communication-services/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
